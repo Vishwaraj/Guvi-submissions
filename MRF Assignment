@@ -1,0 +1,95 @@
+const scores = [
+  {
+    marks: 32,
+    name: "Yvette Merritt"
+  },
+  {
+    marks: 57,
+    name: "Lillian Ellis"
+  },
+  {
+    marks: 22,
+    name: "Mccall Carter"
+  },
+  {
+    marks: 21,
+    name: "Pate Collier"
+  },
+  {
+    marks: 91,
+    name: "Debra Beard"
+  },
+  {
+    marks: 75,
+    name: "Nettie Hancock"
+  },
+  {
+    marks: 20,
+    name: "Hatfield Hodge"
+  }
+];
+// [32, 57, 22]
+// Task 1
+// Print the name list - As an array
+
+
+console.log(scores.map((student) => student.name)); 
+
+
+// Expected Output
+// ["Yvette Merritt", "Lillian Ellis", "Mccall Carter", "Pate Collier" ,
+//  "Debra Beard", "Nettie Hancock",  "Hatfield Hodge"]
+
+// Task 2
+// >=40 pass.. find those student that passed (Use array method)
+
+console.log(scores.filter((student) => student.marks >= 40)); 
+
+
+// Expected Output
+// [{
+//     marks: 57,
+//     name: "Lillian Ellis"
+//   },
+//     {
+//     marks: 91,
+//     name: "Debra Beard"
+//   },
+//   {
+//     marks: 75,
+//     name: "Nettie Hancock"
+//   }]
+
+// Task 3
+//  Find all the names who failed the exams (Array methods)
+
+let failedStudents = scores.filter((student) => student.marks <= 40);
+
+console.log(failedStudents.map((students) => students.name)); 
+
+// Expected Output
+//   ["Yvette Merritt",
+//   "Mccall Carter",
+//   "Pate Collier",
+//   "Hatfield Hodge"
+// ];
+
+// Task 4
+// Find the Average marks
+
+let marks = scores.map((student) => student.marks);
+
+let total = marks.reduce((initialValue, nextValue) => initialValue + nextValue);
+console.log(total/scores.length);
+
+
+// Task 5
+// Find the topper's name
+// Expected Output
+// "Debra Beard"
+
+
+
+
+// Only use
+// map, reduce, filter & destructuring
